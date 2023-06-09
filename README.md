@@ -24,7 +24,7 @@ To install this script, you'll need to have Node.js and Yarn installed on your m
 
 To start the proxy server, run the following command in the root directory of the repository:
 
-```yarn start https://yoursymbolsserver.com/symbols```
+```yarn start https://yoursymbolsserver.com```
 
 This will start the Node.js server on port `3000`. You can then send HTTP requests to `http://localhost:3000` to have them forwarded to the debug symbols storage server.
 
@@ -32,7 +32,7 @@ This will start the Node.js server on port `3000`. You can then send HTTP reques
 
 Or you can provide port and server url when starting a proxy.
 
-```yarn start https://yoursymbolsserver.com/symbols 4000```
+```yarn start https://yoursymbolsserver.com 4000```
 
 ## Using with Visual Studio
 
