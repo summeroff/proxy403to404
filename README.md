@@ -1,6 +1,10 @@
-# Node.js proxy server for servers returning 403 instead of 404
+# Node.js proxy server for symchk 
 
-This Node.js script sets up a local proxy server that forwards HTTP requests to the remote server, replacing any `403` response codes with `404`.
+This Node.js script sets up a web server that serve files from real symbol server.
+
+There is two issues with symchk tool: 
+1. 403 on pdb makes it skip pd_ file
+2. it does not understand chunked response 
 
 If you store your debug info in an AWS S3 bucket with the "ListBucket" permission disabled, it is important to note that the server will return a `403` error for files that do not exist. This can cause issues with tools like `symchk` and `Visual Studio`, which check for `.pdb` files and attempt to retrieve `.pd_` files if the `.pdb` file is not found.
 
